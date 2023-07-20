@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7582A6762A69BC06007127F9 /* thumbnail.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7582A6752A69BC06007127F9 /* thumbnail.icns */; };
+		7582A6792A69BCD3007127F9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7582A6772A69BCD3007127F9 /* README.md */; };
+		7582A67A2A69BCD3007127F9 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 7582A6782A69BCD3007127F9 /* LICENSE.md */; };
 		75E9E09C29F8704A0019EAB3 /* Matrix_Digital_RainView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E9E09B29F8704A0019EAB3 /* Matrix_Digital_RainView.h */; };
 		75E9E09E29F8704A0019EAB3 /* Matrix_Digital_RainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9E09D29F8704A0019EAB3 /* Matrix_Digital_RainView.m */; };
+		75E9E0A629F871C70019EAB3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E9E0A529F871C70019EAB3 /* WebKit.framework */; };
+		75E9E0AA29F8722C0019EAB3 /* matrix_screensaver.js in Resources */ = {isa = PBXBuildFile; fileRef = 75E9E0A829F8722C0019EAB3 /* matrix_screensaver.js */; };
+		75E9E0AB29F8726E0019EAB3 /* matrix_screensaver.html in Resources */ = {isa = PBXBuildFile; fileRef = 75E9E0A729F8722C0019EAB3 /* matrix_screensaver.html */; };
+		75E9E0BE29FB3E6C0019EAB3 /* MatrixConfigController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E9E0BD29FB3E6C0019EAB3 /* MatrixConfigController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7582A6752A69BC06007127F9 /* thumbnail.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = thumbnail.icns; sourceTree = "<group>"; };
+		7582A6772A69BCD3007127F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7582A6782A69BCD3007127F9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		75E9E09829F8704A0019EAB3 /* Matrix Digital Rain.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Matrix Digital Rain.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E9E09B29F8704A0019EAB3 /* Matrix_Digital_RainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix_Digital_RainView.h; sourceTree = "<group>"; };
 		75E9E09D29F8704A0019EAB3 /* Matrix_Digital_RainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matrix_Digital_RainView.m; sourceTree = "<group>"; };
+		75E9E0A529F871C70019EAB3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		75E9E0A729F8722C0019EAB3 /* matrix_screensaver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = matrix_screensaver.html; path = ../../matrix_screensaver.html; sourceTree = "<group>"; };
+		75E9E0A829F8722C0019EAB3 /* matrix_screensaver.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = matrix_screensaver.js; path = ../../matrix_screensaver.js; sourceTree = "<group>"; };
+		75E9E0BD29FB3E6C0019EAB3 /* MatrixConfigController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatrixConfigController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E9E0A629F871C70019EAB3 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,8 +46,11 @@
 		75E9E08E29F8704A0019EAB3 = {
 			isa = PBXGroup;
 			children = (
+				7582A6782A69BCD3007127F9 /* LICENSE.md */,
+				7582A6772A69BCD3007127F9 /* README.md */,
 				75E9E09A29F8704A0019EAB3 /* Matrix Digital Rain */,
 				75E9E09929F8704A0019EAB3 /* Products */,
+				75E9E0A429F871C70019EAB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,10 +65,22 @@
 		75E9E09A29F8704A0019EAB3 /* Matrix Digital Rain */ = {
 			isa = PBXGroup;
 			children = (
+				7582A6752A69BC06007127F9 /* thumbnail.icns */,
 				75E9E09B29F8704A0019EAB3 /* Matrix_Digital_RainView.h */,
 				75E9E09D29F8704A0019EAB3 /* Matrix_Digital_RainView.m */,
+				75E9E0A729F8722C0019EAB3 /* matrix_screensaver.html */,
+				75E9E0A829F8722C0019EAB3 /* matrix_screensaver.js */,
+				75E9E0BD29FB3E6C0019EAB3 /* MatrixConfigController.xib */,
 			);
 			path = "Matrix Digital Rain";
+			sourceTree = "<group>";
+		};
+		75E9E0A429F871C70019EAB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75E9E0A529F871C70019EAB3 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +152,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7582A6762A69BC06007127F9 /* thumbnail.icns in Resources */,
+				75E9E0AA29F8722C0019EAB3 /* matrix_screensaver.js in Resources */,
+				7582A6792A69BCD3007127F9 /* README.md in Resources */,
+				75E9E0AB29F8726E0019EAB3 /* matrix_screensaver.html in Resources */,
+				7582A67A2A69BCD3007127F9 /* LICENSE.md in Resources */,
+				75E9E0BE29FB3E6C0019EAB3 /* MatrixConfigController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

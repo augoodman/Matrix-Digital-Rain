@@ -1,50 +1,59 @@
-//
-//  Matrix_Digital_RainView.m
-//  Matrix Digital Rain
-//
-//  Created by Andrew Goodman on 4/25/23.
-//
-
 #import "Matrix_Digital_RainView.h"
 
 @implementation Matrix_Digital_RainView
 
-- (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
-{
+- (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
-        [self setAnimationTimeInterval:1/30.0];
+        [self setupWebView];
     }
     return self;
 }
 
-- (void)startAnimation
-{
-    [super startAnimation];
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setupWebView];
+    }
+    return self;
 }
 
-- (void)stopAnimation
-{
-    [super stopAnimation];
-}
-
-- (void)drawRect:(NSRect)rect
-{
+- (void)drawRect:(NSRect)rect {
     [super drawRect:rect];
+    
+    if (!_webView) {
+        [self setupWebView];
+    } else {
+        _webView.frame = self.bounds;
+    }
 }
 
-- (void)animateOneFrame
-{
-    return;
+- (void)setupWebView {
+    WKWebViewConfiguration *webConfiguration = [[WKWebViewConfiguration alloc] init];
+    _webView = [[WKWebView alloc] initWithFrame:self.bounds configuration:webConfiguration];
+    _webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    [self addSubview:_webView];
+    [self loadMatrixHTML];
 }
 
-- (BOOL)hasConfigureSheet
-{
+- (void)loadMatrixHTML {
+    NSString *htmlPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"matrix_screensaver" ofType:@"html"];
+    NSURL *htmlURL = [NSURL fileURLWithPath:htmlPath];
+    [_webView loadFileURL:htmlURL allowingReadAccessToURL:htmlURL.URLByDeletingLastPathComponent];
+}
+
+- (void)setFrame:(NSRect)frameRect {
+    [super setFrame:frameRect];
+    if (_webView) {
+        [_webView setFrame:frameRect];
+    }
+}
+
+- (BOOL)hasConfigureSheet {
     return NO;
 }
 
-- (NSWindow*)configureSheet
-{
+- (NSWindow *)configureSheet {
     return nil;
 }
 
